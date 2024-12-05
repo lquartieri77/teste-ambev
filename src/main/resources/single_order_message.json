@@ -1,0 +1,21 @@
+{
+  "productList": [
+    {
+      "nameProduct": "Produto I",
+      "productType": "Tipo I",
+      "quantity": 15,
+      "value": 49.99
+    },
+    {
+      "nameProduct": "Produto J",
+      "productType": "Tipo J",
+      "quantity": 10,
+      "value": 39.50
+    }
+  ],
+  "orderDate": "2024-12-05T11:45:00",
+  "clientCod": 559,
+  "clientName": "José Martins",
+  "clienteDocument": "789.123.456-00",
+  "sellerCode": 325
+}
