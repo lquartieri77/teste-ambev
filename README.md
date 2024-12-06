@@ -54,7 +54,7 @@ Vamos subir nosso compose
 ```bash
 docker-compose up
 ```
-Agora a plicação está rodando direto do container docker.
+Agora a aplicação está rodando direto do container docker.
 
 Dúvidas e melhorias:
 Leonardo Quartieri
