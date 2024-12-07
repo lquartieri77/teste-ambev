@@ -97,12 +97,6 @@
 			<version>0.8.8</version>
 		</dependency>
 
-		<dependency>
-			<groupId>net.bull.javamelody</groupId>
-			<artifactId>javamelody-spring-boot-starter</artifactId>
-			<version>1.90.0</version>
-		</dependency>
-
 	</dependencies>
 
 	<build>

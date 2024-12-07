@@ -3,6 +3,11 @@
 ## Visão Geral
 A **Process Orders Application** é um serviço desenvolvido em Spring Boot para consumir e processar pedidos de vendas. Utiliza PostgreSQL para armazenamento de dados e RabbitMQ para gerenciamento de mensagens.
 
+Como solução a integração 'A', decidi por consumir uma fila, de forma schedulada. Os parametros para este agendamento podem ser alterados no .properties da aplicação.
+Então a aplicação de tempo em tempo busca os novos pedidos, salva na base e Postgres. 
+Como solução para a integração 'B' foi criado uma API-REST, que disponibiliza uma operacao com filtragem de dados e paginação.
+Acredito que esta integração 'B' possa ser evoluida para uma fila, numa outra versão.
+
 ## Requisitos
 - Java 17
 - Maven 3.6+
