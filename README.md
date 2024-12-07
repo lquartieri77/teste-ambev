@@ -10,7 +10,7 @@ A **Process Orders Application** é um serviço desenvolvido em Spring Boot para
 - Docker Compose
 
 ## Configuração do Ambiente de Desenvolvimento
-### 1. Subir os containers do RabbitMQ e do Postgres
+### 1. Subir os containers do RabbitMQ e do Postgres (certifique-se de que o docker esta rodando na sua maquina)
 Isso pode ser feito executando o script abiaxo, disponível para linux e windows:
 ```bash
 start_docker_services.bat
@@ -30,7 +30,7 @@ mvn spring-boot:run
 ```
 
 ### 4. Enviando mensagens de pedidos de venda a nossa fila (Esta a *integracao A*, optei por uma fila para consumir os pedidos)
-Acesse: http://localhost:15672/#/ (Painel de gerenciamento do RabbitMQ), vá em Queues, copie o conteudo do arquivo 'src/main/resources/order_list_message.json',
+Acesse: http://localhost:15672 (Painel de gerenciamento do RabbitMQ), vá em Queues, copie o conteudo do arquivo 'src/main/resources/order_list_message.json',
 cole o json na caixa de texto e clique no botão 'Publish Message'.
 Com a aplicacção rodando, será possivel ver nos logs a mesma consumindo as mensagens e salvando no banco de dados.
 

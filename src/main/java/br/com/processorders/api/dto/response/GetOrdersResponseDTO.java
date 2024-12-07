@@ -6,6 +6,7 @@ import lombok.Builder;
 import lombok.Getter;
 import lombok.Setter;
 import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 
 
 import java.math.BigInteger;
@@ -21,7 +22,6 @@ public class GetOrdersResponseDTO  extends DTO {
     private String assinaturaResposta;
     @JsonProperty("data-hora-resposta")
     private LocalDateTime dataHoraResposta ;
-
     @JsonProperty("orders")
     private Page<OrderDTO> listaDeOrders;
 

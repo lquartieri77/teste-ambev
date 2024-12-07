@@ -30,7 +30,10 @@ public class OrderService {
     public GetOrdersResponseDTO getFilteredOrders(FilterOrderRequestDTO filterOrderRequestDTO, Pageable pageable) {
         Page<Order> listaRetorno = orderRepositoryCustom.findOrdersByCriteria(filterOrderRequestDTO, pageable);
 
-        return GetOrdersResponseDTO.builder().listaDeOrders(listaRetorno.map(OrderMapper::toDto)).dataHoraResposta(LocalDateTime.now()).build();
+        return GetOrdersResponseDTO.builder()
+                .listaDeOrders(listaRetorno.map(OrderMapper::toDto))
+                .dataHoraResposta(LocalDateTime.now())
+                .build();
     }
 
     public List<Order> filtrarLista(List<Order> listaOriginal){

@@ -18,6 +18,8 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
+import java.util.Collections;
+
 @Controller
 @RequestMapping(value = "/orders")
 public class OrderController {
@@ -36,8 +38,8 @@ public class OrderController {
         filtro.setOrderReceived(DateUtils.convertStringToLocalDateTime(orderReceived));
         filtro.setSellerCode(sellerCode);
         filtro.setClienteDocument(clienteDocument);
-        GetOrdersResponseDTO response = orderService.getFilteredOrders(filtro, pageable);
-        return ResponseEntity.ok(response);
+        GetOrdersResponseDTO responseDTO = orderService.getFilteredOrders(filtro, pageable);
+        return ResponseEntity.ok(responseDTO);
     }
 
 }

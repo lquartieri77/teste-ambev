@@ -11,7 +11,7 @@ import java.util.stream.Collectors;
 public class OrderMapper {
 
     public static OrderDTO toDto(Order order) {
-        if (order == null) {
+        if (order == null || order.getProductList() == null) {
             return null;
         }
 
@@ -24,7 +24,7 @@ public class OrderMapper {
                 .clientName(order.getClientName())
                 .clienteDocument(order.getClienteDocument())
                 .sellerCode(order.getSellerCode())
-                .valorTotal(calculaValorTotal(order)) // Supondo que haja um método para calcular o valor total
+                .valorTotal(calculaValorTotal(order))
                 .build();
     }
 
